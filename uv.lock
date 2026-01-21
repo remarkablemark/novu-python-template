@@ -327,7 +327,7 @@ wheels = [
 ]
 
 [[package]]
-name = "fastapi-template"
+name = "novu-python-template"
 version = "0.0.0"
 source = { virtual = "." }
 dependencies = [
