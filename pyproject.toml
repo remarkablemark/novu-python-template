@@ -15,9 +15,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
-    "black==26.1.0",
     "coverage==7.13.4",
-    "isort==8.0.0",
     "mypy<2.0.0,>=1.8.0",
     "pre-commit==4.5.1",
     "pytest==9.0.2",
@@ -29,15 +27,11 @@ dev = [
 Homepage = "https://github.com/remarkablemark/novu-python-template"
 Issues = "https://github.com/remarkablemark/novu-python-template/issues"
 
-[tool.black]
-fast = true
-
 [tool.mypy]
 strict = true
 exclude = ["venv", ".venv", "alembic"]
 
 [tool.ruff]
-target-version = "py310"
 exclude = ["alembic"]
 
 [tool.ruff.lint]
@@ -45,23 +39,18 @@ select = [
     "E",  # pycodestyle errors
     "W",  # pycodestyle warnings
     "F",  # pyflakes
-    "I",  # isort
+    "I",  # isort (import sorting)
     "B",  # flake8-bugbear
     "C4",  # flake8-comprehensions
     "UP",  # pyupgrade
-    "ARG001", # unused arguments in functions
-    "T201",   # print statements are not allowed
+    "ARG001",  # unused arguments in functions
+    "T201",  # print statements are not allowed
 ]
 ignore = [
-    "E501",  # line too long, handled by black
+    "E501",  # line too long, handled by ruff
     "B008",  # do not perform function calls in argument defaults
-    "W191",  # indentation contains tabs
     "B904",  # Allow raising exceptions without from e, for HTTPException
 ]
-
-[tool.ruff.lint.pyupgrade]
-# Preserve types, even if a file imports `from __future__ import annotations`.
-keep-runtime-typing = true
 
 [tool.coverage.run]
 source = ["app"]

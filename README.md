@@ -34,6 +34,10 @@ uv sync
 
 In the project directory, you can run:
 
+### `uv run pre-commit install`
+
+Installs the pre-commit script.
+
 ### `uv run fastapi dev`
 
 Runs the app in development mode:
@@ -47,11 +51,7 @@ The server will reload if you make edits.
 
 Runs the app in production mode.
 
-### `uv run pre-commit install`
-
-Installs the pre-commit script.
-
-### `uv run black .`
+### `uv run ruff format`
 
 Formats the code.
 
