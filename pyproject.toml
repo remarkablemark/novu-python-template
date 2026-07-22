@@ -17,7 +17,7 @@ dependencies = [
 dev = [
     "coverage==7.15.2",
     "mypy==2.3.0",
-    "pre-commit==4.6.0",
+    "pre-commit==4.6.1",
     "pytest==9.1.1",
     "ruff==0.15.22",
     "types-passlib<2.0.0.0,>=1.7.7.20240106",
